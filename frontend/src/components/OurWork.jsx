@@ -96,10 +96,15 @@ export default function OurWork() {
         </p>
       </div>
 
-      <div className="marquee-mask">
+      <div className="marquee-mask space-y-6">
         <Marquee speed={36} gradient={false} pauseOnHover>
-          {[...projects, ...projects].map((p, i) => (
-            <Card key={`${p.name}-${i}`} p={p} />
+          {[...projects.slice(0, 5), ...projects.slice(0, 5)].map((p, i) => (
+            <Card key={`row1-${p.name}-${i}`} p={p} />
+          ))}
+        </Marquee>
+        <Marquee speed={32} gradient={false} pauseOnHover direction="right">
+          {[...projects.slice(5), ...projects.slice(5)].map((p, i) => (
+            <Card key={`row2-${p.name}-${i}`} p={p} />
           ))}
         </Marquee>
       </div>
