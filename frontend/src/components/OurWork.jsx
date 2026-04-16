@@ -56,7 +56,7 @@ const projects = [
 const Card = ({ p }) => (
   <div
     data-testid={`work-${p.name.toLowerCase().replace(/\s+/g, "-")}`}
-    className="group relative mx-4 w-[360px] h-[400px] bg-[#141211] border border-[#282522] overflow-hidden flex-shrink-0 shadow-[0_20px_60px_rgba(0,0,0,0.6)] hover:border-[#c8ac82] transition-all duration-500"
+    className="group relative mx-4 w-[360px] h-[400px] bg-[#0d0d0d] border border-[#1f1f1f] overflow-hidden flex-shrink-0 shadow-[0_20px_60px_rgba(0,0,0,0.6)] hover:border-[#0055fe] transition-all duration-500"
   >
     <img
       src={p.img}
@@ -66,13 +66,13 @@ const Card = ({ p }) => (
     />
     <div
       aria-hidden
-      className="absolute inset-0 bg-gradient-to-t from-[#0a0909] via-[#0a0909]/40 to-transparent"
+      className="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/40 to-transparent"
     />
     <div className="relative z-10 h-full flex flex-col justify-end p-6">
-      <div className="text-[10px] uppercase tracking-[0.22em] text-[#c8ac82] font-mono mb-2">
+      <div className="text-[10px] uppercase tracking-[0.22em] text-[#0055fe] font-mono mb-2">
         {p.tag}
       </div>
-      <div className="font-display text-3xl text-[#f4ebe0] tracking-tight leading-none">
+      <div className="font-display text-3xl text-[#ffffff] tracking-tight leading-none">
         {p.name}
       </div>
     </div>
@@ -87,13 +87,13 @@ export default function OurWork() {
       className="relative py-24 md:py-28"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8 mb-16 text-center">
-        <div className="text-[10px] uppercase tracking-[0.35em] text-[#c8ac82] font-mono mb-5">
+        <div className="text-[10px] uppercase tracking-[0.35em] text-[#0055fe] font-mono mb-5">
           — Selected Work
         </div>
-        <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#f4ebe0] leading-none">
+        <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#ffffff] leading-none">
           Our <span className="font-display-italic">Work</span>
         </h2>
-        <p className="mt-6 text-[#a39b92] max-w-xl mx-auto font-body leading-relaxed">
+        <p className="mt-6 text-[#999999] max-w-xl mx-auto font-body leading-relaxed">
           A few recent builds across beauty, fitness, logistics, cybersecurity,
           renewable energy, education, food, real estate, and healthcare.
         </p>

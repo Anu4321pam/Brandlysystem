@@ -63,12 +63,12 @@ export default function Services({ onScrollToContact }) {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center mb-20">
-          <div className="text-[10px] uppercase tracking-[0.35em] text-[#c8ac82] font-mono mb-5">
+          <div className="text-[10px] uppercase tracking-[0.35em] text-[#0055fe] font-mono mb-5">
             — Our Services
           </div>
           <h2
             data-testid="services-heading"
-            className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#f4ebe0] leading-[0.95]"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#ffffff] leading-[0.95]"
           >
             What We Help{" "}
             <span className="font-display-italic">Businesses</span> With
@@ -86,25 +86,25 @@ export default function Services({ onScrollToContact }) {
               data-testid={`service-${i}`}
               className={`surface group p-8 md:p-10 flex flex-col gap-6 min-h-[240px] relative overflow-hidden ${s.span}`}
             >
-              <div className="absolute top-6 right-6 text-[11px] font-mono tracking-[0.2em] text-[#a39b92]/40 group-hover:text-[#c8ac82]/70 transition-colors">
+              <div className="absolute top-6 right-6 text-[11px] font-mono tracking-[0.2em] text-[#999999]/40 group-hover:text-[#0055fe]/70 transition-colors">
                 {s.index}
               </div>
 
               <div className="flex items-start justify-between">
-                <div className="h-12 w-12 border border-[#282522] group-hover:border-[#c8ac82] transition-colors flex items-center justify-center text-[#c8ac82]">
+                <div className="h-12 w-12 border border-[#1f1f1f] group-hover:border-[#0055fe] transition-colors flex items-center justify-center text-[#0055fe]">
                   <s.Icon size={18} strokeWidth={1.5} />
                 </div>
                 <ArrowUpRight
                   size={22}
                   strokeWidth={1}
-                  className="text-[#a39b92]/40 group-hover:text-[#c8ac82] transition-all duration-500 group-hover:-translate-y-1 group-hover:translate-x-1"
+                  className="text-[#999999]/40 group-hover:text-[#0055fe] transition-all duration-500 group-hover:-translate-y-1 group-hover:translate-x-1"
                 />
               </div>
               <div className="mt-auto">
-                <div className="font-display text-2xl md:text-3xl text-[#f4ebe0] tracking-[-0.01em] leading-tight">
+                <div className="font-display text-2xl md:text-3xl text-[#ffffff] tracking-[-0.01em] leading-tight">
                   {s.title}
                 </div>
-                <p className="mt-3 text-[#a39b92] leading-relaxed text-[14px] md:text-[15px] font-body max-w-xl">
+                <p className="mt-3 text-[#999999] leading-relaxed text-[14px] md:text-[15px] font-body max-w-xl">
                   {s.desc}
                 </p>
               </div>
@@ -118,7 +118,7 @@ export default function Services({ onScrollToContact }) {
             data-testid="services-contact-btn"
             className="pill-light h-12 px-8 text-[12px] font-mono tracking-[0.14em] uppercase"
           >
-            Start Your Project
+            Contact Us
           </button>
         </div>
       </div>

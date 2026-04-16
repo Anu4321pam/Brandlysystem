@@ -46,8 +46,8 @@ const ScoreRing = ({ score }) => {
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="font-display text-4xl text-[#f4ebe0]">{pct}</div>
-        <div className="text-[10px] uppercase tracking-widest text-[#a39b92] font-mono">
+        <div className="font-display text-4xl text-[#ffffff]">{pct}</div>
+        <div className="text-[10px] uppercase tracking-widest text-[#999999] font-mono">
           / 100
         </div>
       </div>
@@ -58,9 +58,9 @@ const ScoreRing = ({ score }) => {
 const statusStyles = {
   good: {
     Icon: CheckCircle2,
-    color: "text-[#c8ac82]",
-    border: "border-[#c8ac82]/20",
-    bg: "bg-[#c8ac82]/5",
+    color: "text-[#0055fe]",
+    border: "border-[#0055fe]/20",
+    bg: "bg-[#0055fe]/5",
     label: "GOOD",
   },
   warning: {
@@ -92,12 +92,12 @@ const FindingRow = ({ f }) => {
           <span className={`text-[10px] tracking-widest font-bold ${s.color} font-mono`}>
             {s.label}
           </span>
-          <span className="text-[10px] tracking-widest text-[#a39b92]/60 font-mono">
+          <span className="text-[10px] tracking-widest text-[#999999]/60 font-mono">
             · {f.category}
           </span>
         </div>
-        <div className="mt-1 font-semibold text-[#f4ebe0]">{f.title}</div>
-        <div className="mt-1 text-sm text-[#a39b92] leading-relaxed">
+        <div className="mt-1 font-semibold text-[#ffffff]">{f.title}</div>
+        <div className="mt-1 text-sm text-[#999999] leading-relaxed">
           {f.description}
         </div>
       </div>
@@ -221,7 +221,7 @@ const AuditTool = forwardRef(function AuditTool(
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <div className="text-center mb-14">
-          <div className="text-xs uppercase tracking-[0.3em] text-[#a39b92] font-mono mb-4">
+          <div className="text-xs uppercase tracking-[0.3em] text-[#999999] font-mono mb-4">
             Free Lead Magnet Tools
           </div>
           <h2
@@ -230,7 +230,7 @@ const AuditTool = forwardRef(function AuditTool(
           >
             Grade Your Online Presence
           </h2>
-          <p className="mt-5 text-[#a39b92] text-base md:text-lg max-w-xl mx-auto">
+          <p className="mt-5 text-[#999999] text-base md:text-lg max-w-xl mx-auto">
             Two free tools. Real scoring. Instant feedback. Pick one to see
             exactly where you're losing leads.
           </p>
@@ -247,28 +247,28 @@ const AuditTool = forwardRef(function AuditTool(
             data-testid="magnet-website-card"
             className={`text-left rounded-2xl p-7 transition-all border ${
               tab === "website"
-                ? "bg-gradient-to-br from-[#c8ac82]/10 via-[#0a0a0a] to-[#0a0a0a] border-[#c8ac82]/50"
-                : "bg-[#141211] border-[#282522] hover:border-[#3a3632]"
+                ? "bg-gradient-to-br from-[#0055fe]/10 via-[#0a0a0a] to-[#0a0a0a] border-[#0055fe]/50"
+                : "bg-[#0d0d0d] border-[#1f1f1f] hover:border-[#2a2a2a]"
             }`}
           >
             <div className="flex items-start justify-between">
               <div
                 className={`h-11 w-11 rounded-xl flex items-center justify-center ${
                   tab === "website"
-                    ? "bg-[#c8ac82]/15 border border-[#c8ac82]/40 text-[#c8ac82]"
-                    : "bg-[#141211] border border-[#282522] text-[#f4ebe0]"
+                    ? "bg-[#0055fe]/15 border border-[#0055fe]/40 text-[#0055fe]"
+                    : "bg-[#0d0d0d] border border-[#1f1f1f] text-[#ffffff]"
                 }`}
               >
                 <Globe size={20} />
               </div>
-              <span className="text-[10px] uppercase tracking-widest font-mono text-[#c8ac82]">
+              <span className="text-[10px] uppercase tracking-widest font-mono text-[#0055fe]">
                 Free
               </span>
             </div>
             <h3 className="mt-6 font-display text-2xl tracking-tight">
               Website Audit
             </h3>
-            <p className="mt-2 text-[#a39b92] text-sm leading-relaxed">
+            <p className="mt-2 text-[#999999] text-sm leading-relaxed">
               24-point scan powered by Google Lighthouse. Performance, SEO, Core
               Web Vitals, accessibility, security, and crawlability.
             </p>
@@ -283,28 +283,28 @@ const AuditTool = forwardRef(function AuditTool(
             data-testid="magnet-gmb-card"
             className={`text-left rounded-2xl p-7 transition-all border ${
               tab === "gmb"
-                ? "bg-gradient-to-br from-[#c8ac82]/10 via-[#0a0a0a] to-[#0a0a0a] border-[#c8ac82]/50"
-                : "bg-[#141211] border-[#282522] hover:border-[#3a3632]"
+                ? "bg-gradient-to-br from-[#0055fe]/10 via-[#0a0a0a] to-[#0a0a0a] border-[#0055fe]/50"
+                : "bg-[#0d0d0d] border-[#1f1f1f] hover:border-[#2a2a2a]"
             }`}
           >
             <div className="flex items-start justify-between">
               <div
                 className={`h-11 w-11 rounded-xl flex items-center justify-center ${
                   tab === "gmb"
-                    ? "bg-[#c8ac82]/15 border border-[#c8ac82]/40 text-[#c8ac82]"
-                    : "bg-[#141211] border border-[#282522] text-[#f4ebe0]"
+                    ? "bg-[#0055fe]/15 border border-[#0055fe]/40 text-[#0055fe]"
+                    : "bg-[#0d0d0d] border border-[#1f1f1f] text-[#ffffff]"
                 }`}
               >
                 <MapPin size={20} />
               </div>
-              <span className="text-[10px] uppercase tracking-widest font-mono text-[#c8ac82]">
+              <span className="text-[10px] uppercase tracking-widest font-mono text-[#0055fe]">
                 Free
               </span>
             </div>
             <h3 className="mt-6 font-display text-2xl tracking-tight">
               Google Business Profile Audit
             </h3>
-            <p className="mt-2 text-[#a39b92] text-sm leading-relaxed">
+            <p className="mt-2 text-[#999999] text-sm leading-relaxed">
               Rating, review volume, category setup, Q&A, posts frequency, and
               local-pack ranking gaps — with a prioritised fix list.
             </p>
@@ -322,14 +322,14 @@ const AuditTool = forwardRef(function AuditTool(
               <div className="flex-1 relative">
                 <Globe
                   size={16}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#a39b92]"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#999999]"
                 />
                 <Input
                   data-testid="website-url-input"
                   value={websiteUrl}
                   onChange={(e) => setWebsiteUrl(e.target.value)}
                   placeholder="https://yourbusiness.com"
-                  className="h-13 py-3.5 pl-10 text-base bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60 focus-visible:ring-[#c8ac82]/50 focus-visible:border-[#c8ac82]/50"
+                  className="h-13 py-3.5 pl-10 text-base bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60 focus-visible:ring-[#0055fe]/50 focus-visible:border-[#0055fe]/50"
                 />
               </div>
               <button
@@ -356,14 +356,14 @@ const AuditTool = forwardRef(function AuditTool(
                 <div className="flex-1 relative">
                   <MapPin
                     size={16}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-[#a39b92]"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-[#999999]"
                   />
                   <Input
                     data-testid="gmb-url-input"
                     value={gmbUrl}
                     onChange={(e) => setGmbUrl(e.target.value)}
                     placeholder="https://maps.google.com/?cid=..."
-                    className="h-13 py-3.5 pl-10 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60 focus-visible:ring-[#c8ac82]/50 focus-visible:border-[#c8ac82]/50"
+                    className="h-13 py-3.5 pl-10 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60 focus-visible:ring-[#0055fe]/50 focus-visible:border-[#0055fe]/50"
                   />
                 </div>
                 <button
@@ -390,24 +390,24 @@ const AuditTool = forwardRef(function AuditTool(
                   value={gmbBusiness}
                   onChange={(e) => setGmbBusiness(e.target.value)}
                   placeholder="Business name (optional)"
-                  className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/50"
+                  className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/50"
                 />
                 <Input
                   data-testid="gmb-rating-input"
                   value={gmbRating}
                   onChange={(e) => setGmbRating(e.target.value)}
                   placeholder="Current rating (e.g. 4.3)"
-                  className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/50"
+                  className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/50"
                 />
                 <Input
                   data-testid="gmb-reviews-input"
                   value={gmbReviews}
                   onChange={(e) => setGmbReviews(e.target.value)}
                   placeholder="Review count (e.g. 47)"
-                  className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/50"
+                  className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/50"
                 />
               </div>
-              <p className="text-xs text-[#a39b92]">
+              <p className="text-xs text-[#999999]">
                 We enrich the audit with your rating & review count if provided.
               </p>
             </form>
@@ -424,8 +424,8 @@ const AuditTool = forwardRef(function AuditTool(
               data-testid="audit-loading"
               className="surface mt-8 p-10 text-center"
             >
-              <Loader2 className="animate-spin mx-auto text-[#c8ac82]" size={28} />
-              <p className="mt-4 text-[#f4ebe0] font-medium">
+              <Loader2 className="animate-spin mx-auto text-[#0055fe]" size={28} />
+              <p className="mt-4 text-[#ffffff] font-medium">
                 Running deep scan on your{" "}
                 {tab === "website" ? "website" : "Google Business Profile"}...
               </p>
@@ -447,13 +447,13 @@ const AuditTool = forwardRef(function AuditTool(
               <div className="surface p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
                 <ScoreRing score={report.score} />
                 <div className="flex-1 text-center md:text-left">
-                  <div className="text-xs uppercase tracking-widest text-[#a39b92] font-mono">
+                  <div className="text-xs uppercase tracking-widest text-[#999999] font-mono">
                     {report.kind === "website" ? "Website audit" : "GMB audit"}
                   </div>
                   <div className="mt-1 font-display text-2xl tracking-tight break-all">
                     {report.target}
                   </div>
-                  <p className="mt-2 text-[#a39b92] max-w-xl">{report.summary}</p>
+                  <p className="mt-2 text-[#999999] max-w-xl">{report.summary}</p>
                   <div className="mt-4 flex flex-wrap gap-3 justify-center md:justify-start">
                     <span className="inline-flex items-center gap-2 text-sm px-3 h-8 rounded-full bg-red-500/10 text-red-300 border border-red-500/20">
                       <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
@@ -463,8 +463,8 @@ const AuditTool = forwardRef(function AuditTool(
                       <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
                       {warnCount} warnings
                     </span>
-                    <span className="inline-flex items-center gap-2 text-sm px-3 h-8 rounded-full bg-[#c8ac82]/8 text-[#c8ac82] border border-[#c8ac82]/20">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#c8ac82]" />
+                    <span className="inline-flex items-center gap-2 text-sm px-3 h-8 rounded-full bg-[#0055fe]/8 text-[#0055fe] border border-[#0055fe]/20">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#0055fe]" />
                       {goodCount} passing
                     </span>
                   </div>
@@ -509,7 +509,7 @@ const AuditTool = forwardRef(function AuditTool(
                             <div className="font-display text-lg tracking-tight">
                               Unlock full report
                             </div>
-                            <div className="text-xs text-[#a39b92]">
+                            <div className="text-xs text-[#999999]">
                               {issueCount + warnCount} more findings + fix priority
                             </div>
                           </div>
@@ -524,14 +524,14 @@ const AuditTool = forwardRef(function AuditTool(
                             value={lead.name}
                             onChange={(e) => setLead({ ...lead, name: e.target.value })}
                             placeholder="Your name"
-                            className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60"
+                            className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60"
                           />
                           <Input
                             data-testid="lead-form-business"
                             value={lead.business_name}
                             onChange={(e) => setLead({ ...lead, business_name: e.target.value })}
                             placeholder="Business name"
-                            className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60"
+                            className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60"
                           />
                           <Input
                             data-testid="lead-form-email"
@@ -539,14 +539,14 @@ const AuditTool = forwardRef(function AuditTool(
                             value={lead.email}
                             onChange={(e) => setLead({ ...lead, email: e.target.value })}
                             placeholder="Work email"
-                            className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60"
+                            className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60"
                           />
                           <Input
                             data-testid="lead-form-phone"
                             value={lead.phone}
                             onChange={(e) => setLead({ ...lead, phone: e.target.value })}
                             placeholder="Phone / WhatsApp"
-                            className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60"
+                            className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60"
                           />
                           <button
                             type="submit"
@@ -563,7 +563,7 @@ const AuditTool = forwardRef(function AuditTool(
                               "Unlock full report"
                             )}
                           </button>
-                          <p className="text-[11px] text-[#a39b92] text-center">
+                          <p className="text-[11px] text-[#999999] text-center">
                             We only use this to send your audit PDF & follow up.
                             No spam.
                           </p>
@@ -578,14 +578,14 @@ const AuditTool = forwardRef(function AuditTool(
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     data-testid="post-unlock-cta"
-                    className="mt-8 rounded-2xl p-6 md:p-8 bg-gradient-to-br from-[#c8ac82]/10 via-[#0a0a0a] to-[#0a0a0a] border border-[#c8ac82]/40"
+                    className="mt-8 rounded-2xl p-6 md:p-8 bg-gradient-to-br from-[#0055fe]/10 via-[#0a0a0a] to-[#0a0a0a] border border-[#0055fe]/40"
                   >
                     <div className="flex flex-col md:flex-row items-start md:items-center gap-5 justify-between">
                       <div>
                         <div className="font-display text-xl tracking-tight">
                           Want us to fix all of this for you?
                         </div>
-                        <p className="text-[#a39b92] mt-1 text-sm">
+                        <p className="text-[#999999] mt-1 text-sm">
                           Start a project with us — we'll walk through your audit
                           live.
                         </p>

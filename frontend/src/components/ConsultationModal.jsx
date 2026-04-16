@@ -62,7 +62,7 @@ export default function ConsultationModal({ open, onOpenChange }) {
     >
       <DialogContent
         data-testid="consult-modal"
-        className="bg-[#0a0a0a] border border-white/[0.08] text-[#f4ebe0] max-w-md p-0 overflow-hidden"
+        className="bg-[#0a0a0a] border border-white/[0.08] text-[#ffffff] max-w-md p-0 overflow-hidden"
       >
         <div className="relative p-6 pb-4">
           <div
@@ -70,16 +70,16 @@ export default function ConsultationModal({ open, onOpenChange }) {
             className="absolute inset-0 bg-gradient-to-br from-violet-600/15 via-transparent to-fuchsia-600/10 pointer-events-none"
           />
           <DialogHeader className="relative">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#141211] border border-[#282522] px-3 py-1 w-fit mb-3">
-              <Sparkles size={12} className="text-[#c8ac82]" />
-              <span className="text-[10px] uppercase tracking-widest text-[#a39b92] font-mono">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#0d0d0d] border border-[#1f1f1f] px-3 py-1 w-fit mb-3">
+              <Sparkles size={12} className="text-[#0055fe]" />
+              <span className="text-[10px] uppercase tracking-widest text-[#999999] font-mono">
                 Free · 20 minutes
               </span>
             </div>
-            <DialogTitle className="font-display font-bold text-2xl text-[#f4ebe0]">
+            <DialogTitle className="font-display font-bold text-2xl text-[#ffffff]">
               {done ? "We're on it." : "Book free consultation"}
             </DialogTitle>
-            <DialogDescription className="text-[#a39b92]">
+            <DialogDescription className="text-[#999999]">
               {done
                 ? "Your request is in. We'll reach out within 24 hours with a calendar link."
                 : "Tell us about your business. We'll walk through your audit live and ship a 90-day growth plan."}
@@ -98,7 +98,7 @@ export default function ConsultationModal({ open, onOpenChange }) {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               placeholder="Your name"
-              className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60"
+              className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60"
             />
             <Input
               data-testid="consult-email"
@@ -106,14 +106,14 @@ export default function ConsultationModal({ open, onOpenChange }) {
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               placeholder="Work email"
-              className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60"
+              className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60"
             />
             <Input
               data-testid="consult-phone"
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               placeholder="Phone / WhatsApp"
-              className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60"
+              className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60"
             />
             <Input
               data-testid="consult-business"
@@ -122,7 +122,7 @@ export default function ConsultationModal({ open, onOpenChange }) {
                 setForm({ ...form, business_name: e.target.value })
               }
               placeholder="Business name (optional)"
-              className="h-11 bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60"
+              className="h-11 bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60"
             />
             <Textarea
               data-testid="consult-message"
@@ -130,13 +130,13 @@ export default function ConsultationModal({ open, onOpenChange }) {
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               placeholder="What are you trying to grow? (optional)"
               rows={3}
-              className="bg-[#141211] border-[#282522] text-[#f4ebe0] placeholder:text-[#a39b92]/60 resize-none"
+              className="bg-[#0d0d0d] border-[#1f1f1f] text-[#ffffff] placeholder:text-[#999999]/60 resize-none"
             />
             <Button
               type="submit"
               disabled={submitting}
               data-testid="consult-submit"
-              className="w-full h-12 rounded-xl bg-gradient-to-r from-[#c8ac82] to-[#d7c19d] hover:from-[#c8ac82] hover:to-[#d7c19d] font-semibold shadow-[0_8px_30px_rgba(139,92,246,0.3)]"
+              className="w-full h-12 rounded-xl bg-gradient-to-r from-[#0055fe] to-[#0040cc] hover:from-[#0055fe] hover:to-[#0040cc] font-semibold shadow-[0_8px_30px_rgba(139,92,246,0.3)]"
             >
               {submitting ? (
                 <>

@@ -18,7 +18,7 @@ export default function TrustLogos() {
   return (
     <section
       data-testid="trust-section"
-      className="relative py-20 border-y border-[#282522]"
+      className="relative py-20 border-y border-[#1f1f1f]"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8 mb-12 text-center">
         <div className="inline-flex items-center gap-3">
@@ -27,17 +27,17 @@ export default function TrustLogos() {
               <Star
                 key={i}
                 size={14}
-                className="fill-[#c8ac82] text-[#c8ac82]"
+                className="fill-[#0055fe] text-[#0055fe]"
               />
             ))}
           </div>
           <span
             data-testid="trust-rating"
-            className="text-[#f4ebe0] font-display text-xl"
+            className="text-[#ffffff] font-display text-xl"
           >
             4.9
           </span>
-          <span className="text-[#a39b92] text-[11px] font-mono tracking-[0.2em] uppercase">
+          <span className="text-[#999999] text-[11px] font-mono tracking-[0.2em] uppercase">
             From 100+ Clients
           </span>
         </div>
@@ -49,7 +49,7 @@ export default function TrustLogos() {
             <div
               key={l}
               data-testid={`logo-${l.toLowerCase().replace(/\s+/g, "-")}`}
-              className="mx-14 flex items-center gap-3 text-[#a39b92]/50 hover:text-[#c8ac82] transition-colors duration-500"
+              className="mx-14 flex items-center gap-3 text-[#999999]/50 hover:text-[#0055fe] transition-colors duration-500"
             >
               <div className="h-1.5 w-1.5 rounded-full bg-current" />
               <span className="font-display text-xl tracking-[0.04em] whitespace-nowrap">

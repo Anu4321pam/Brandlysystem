@@ -32,23 +32,23 @@ export default function HowItWorks({ onBookConsult }) {
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
           <div>
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c8ac82] font-mono">
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#0055fe] font-mono">
               — How It Works
             </span>
-            <h2 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#f4ebe0] leading-[0.95]">
+            <h2 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#ffffff] leading-[0.95]">
               Three steps.{" "}
-              <span className="font-display-italic text-[#a39b92]">
+              <span className="font-display-italic text-[#999999]">
                 No fluff.
               </span>
             </h2>
           </div>
-          <p className="md:max-w-sm text-[#a39b92] font-body leading-relaxed">
+          <p className="md:max-w-sm text-[#999999] font-body leading-relaxed">
             From first call to fully managed growth system — here's exactly how
             we work with you.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-0 border-t border-[#282522]">
+        <div className="grid md:grid-cols-3 gap-0 border-t border-[#1f1f1f]">
           {steps.map((s, i) => (
             <motion.div
               key={s.n}
@@ -56,22 +56,22 @@ export default function HowItWorks({ onBookConsult }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className={`relative p-10 md:p-12 border-b border-[#282522] ${
+              className={`relative p-10 md:p-12 border-b border-[#1f1f1f] ${
                 i < steps.length - 1 ? "md:border-r" : ""
-              } group hover:bg-[#141211] transition-colors duration-500`}
+              } group hover:bg-[#0d0d0d] transition-colors duration-500`}
               data-testid={`step-${s.n}`}
             >
               <div className="stroke-num text-[10rem] absolute -top-4 right-6 opacity-60 group-hover:opacity-100 transition-opacity">
                 {s.n}
               </div>
               <div className="relative">
-                <div className="h-12 w-12 border border-[#282522] group-hover:border-[#c8ac82] transition-colors flex items-center justify-center text-[#c8ac82]">
+                <div className="h-12 w-12 border border-[#1f1f1f] group-hover:border-[#0055fe] transition-colors flex items-center justify-center text-[#0055fe]">
                   <s.Icon size={18} strokeWidth={1.5} />
                 </div>
-                <div className="mt-10 font-display text-3xl text-[#f4ebe0] tracking-tight leading-tight">
+                <div className="mt-10 font-display text-3xl text-[#ffffff] tracking-tight leading-tight">
                   {s.title}
                 </div>
-                <p className="mt-4 text-[#a39b92] leading-relaxed font-body max-w-sm">
+                <p className="mt-4 text-[#999999] leading-relaxed font-body max-w-sm">
                   {s.desc}
                 </p>
               </div>

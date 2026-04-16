@@ -26,29 +26,32 @@ export default function Header({ onScrollToAudit, onScrollToContact }) {
       data-testid="site-header"
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#0a0909]/80 backdrop-blur-xl border-b border-[#282522]"
+          ? "bg-black/80 backdrop-blur-xl border-b border-white/10"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 h-18 py-4 flex items-center justify-between">
         <a
           href="#"
           data-testid="brand-logo"
           className="flex items-center gap-2 group"
         >
-          <span className="font-display text-[#f4ebe0] text-[15px] uppercase tracking-[0.28em] font-medium group-hover:text-[#c8ac82] transition-colors">
-            Brandly <span className="font-display-italic">Systems</span>
+          <div className="h-8 w-8 rounded-lg bg-[#0055fe] flex items-center justify-center text-white font-display font-bold text-sm">
+            B
+          </div>
+          <span className="font-display text-white text-[15px] font-bold tracking-tight group-hover:text-[#0055fe] transition-colors">
+            BRANDLY SYSTEMS
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
+        <nav className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
           {links.slice(0, 5).map((l) =>
             l.href ? (
               <a
                 key={l.label}
                 href={l.href}
                 data-testid={`nav-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
-                className="text-[12px] font-mono tracking-[0.2em] uppercase text-[#a39b92] hover:text-[#c8ac82] transition-colors"
+                className="text-[14px] font-medium text-white/70 hover:text-white transition-colors"
               >
                 {l.label}
               </a>
@@ -57,7 +60,7 @@ export default function Header({ onScrollToAudit, onScrollToContact }) {
                 key={l.label}
                 onClick={l.onClick}
                 data-testid={`nav-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
-                className="text-[12px] font-mono tracking-[0.2em] uppercase text-[#a39b92] hover:text-[#c8ac82] transition-colors"
+                className="text-[14px] font-medium text-white/70 hover:text-white transition-colors"
               >
                 {l.label}
               </button>
@@ -69,12 +72,12 @@ export default function Header({ onScrollToAudit, onScrollToContact }) {
           <button
             onClick={onScrollToContact}
             data-testid="header-contact-btn"
-            className="hidden md:inline-flex pill-light h-10 px-6 text-[12px] font-mono tracking-[0.14em] uppercase"
+            className="hidden md:inline-flex pill-light h-10 px-5 text-[13px]"
           >
             Contact Us
           </button>
           <button
-            className="md:hidden text-[#f4ebe0] p-2"
+            className="md:hidden text-white p-2"
             data-testid="mobile-menu-toggle"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
@@ -85,7 +88,7 @@ export default function Header({ onScrollToAudit, onScrollToContact }) {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-[#282522] bg-[#0a0909]/95 backdrop-blur-xl">
+        <div className="md:hidden border-t border-white/10 bg-black/95 backdrop-blur-xl">
           <div className="px-6 py-5 flex flex-col gap-4">
             {links.map((l) =>
               l.href ? (
@@ -93,7 +96,7 @@ export default function Header({ onScrollToAudit, onScrollToContact }) {
                   key={l.label}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-[13px] font-mono tracking-[0.2em] uppercase text-[#a39b92] hover:text-[#c8ac82]"
+                  className="text-[15px] font-medium text-white/80 hover:text-white"
                 >
                   {l.label}
                 </a>
@@ -104,7 +107,7 @@ export default function Header({ onScrollToAudit, onScrollToContact }) {
                     l.onClick?.();
                     setOpen(false);
                   }}
-                  className="text-[13px] font-mono tracking-[0.2em] uppercase text-[#a39b92] hover:text-[#c8ac82] text-left"
+                  className="text-[15px] font-medium text-white/80 hover:text-white text-left"
                 >
                   {l.label}
                 </button>
@@ -116,7 +119,7 @@ export default function Header({ onScrollToAudit, onScrollToContact }) {
                 setOpen(false);
               }}
               data-testid="mobile-contact-btn"
-              className="pill-light h-11 px-5 w-full text-[12px] font-mono tracking-[0.14em] uppercase mt-3"
+              className="pill-light h-11 px-5 w-full text-[13px] mt-2"
             >
               Contact Us
             </button>

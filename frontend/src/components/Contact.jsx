@@ -77,17 +77,17 @@ const Contact = forwardRef(function Contact(_, ref) {
       <div aria-hidden className="absolute inset-0 accent-glow opacity-60 pointer-events-none" />
       <div className="relative max-w-3xl mx-auto px-6 md:px-8">
         <div className="text-center mb-16">
-          <div className="text-[10px] uppercase tracking-[0.35em] text-[#c8ac82] font-mono mb-5">
+          <div className="text-[10px] uppercase tracking-[0.35em] text-[#0055fe] font-mono mb-5">
             — Contact Us
           </div>
           <h2
             data-testid="contact-heading"
-            className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#f4ebe0] leading-[0.95]"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#ffffff] leading-[0.95]"
           >
             Start Your{" "}
             <span className="font-display-italic">Project</span>
           </h2>
-          <p className="mt-6 text-[#a39b92] text-base md:text-lg max-w-xl mx-auto font-body leading-relaxed">
+          <p className="mt-6 text-[#999999] text-base md:text-lg max-w-xl mx-auto font-body leading-relaxed">
             Tell us a bit about your business and what you're looking to build.
             We'll review your request and get back to you shortly.
           </p>
@@ -96,10 +96,10 @@ const Contact = forwardRef(function Contact(_, ref) {
         <div className="surface p-8 md:p-12">
           {done ? (
             <div className="text-center py-12" data-testid="contact-success">
-              <div className="font-display text-4xl text-[#f4ebe0] mb-4">
+              <div className="font-display text-4xl text-[#ffffff] mb-4">
                 Opening <span className="font-display-italic champagne-text">WhatsApp</span>…
               </div>
-              <p className="text-[#a39b92] font-body">
+              <p className="text-[#999999] font-body">
                 If it didn't open automatically, tap the button below to chat with us on WhatsApp.
               </p>
               <a
@@ -123,7 +123,7 @@ const Contact = forwardRef(function Contact(_, ref) {
             >
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <label className="text-[10px] uppercase tracking-[0.25em] text-[#a39b92] font-mono mb-3 block">
+                  <label className="text-[10px] uppercase tracking-[0.25em] text-[#999999] font-mono mb-3 block">
                     First Name
                   </label>
                   <Input
@@ -135,7 +135,7 @@ const Contact = forwardRef(function Contact(_, ref) {
                   />
                 </div>
                 <div>
-                  <label className="text-[10px] uppercase tracking-[0.25em] text-[#a39b92] font-mono mb-3 block">
+                  <label className="text-[10px] uppercase tracking-[0.25em] text-[#999999] font-mono mb-3 block">
                     WhatsApp Number
                   </label>
                   <Input
@@ -148,7 +148,7 @@ const Contact = forwardRef(function Contact(_, ref) {
                 </div>
               </div>
               <div>
-                <label className="text-[10px] uppercase tracking-[0.25em] text-[#a39b92] font-mono mb-3 block">
+                <label className="text-[10px] uppercase tracking-[0.25em] text-[#999999] font-mono mb-3 block">
                   Email
                 </label>
                 <Input
@@ -161,24 +161,24 @@ const Contact = forwardRef(function Contact(_, ref) {
                 />
               </div>
               <div>
-                <label className="text-[10px] uppercase tracking-[0.25em] text-[#a39b92] font-mono mb-3 block">
+                <label className="text-[10px] uppercase tracking-[0.25em] text-[#999999] font-mono mb-3 block">
                   What Service Do You Need?
                 </label>
                 <select
                   data-testid="contact-service"
                   value={form.service}
                   onChange={(e) => setForm({ ...form, service: e.target.value })}
-                  className="w-full h-11 bg-transparent border-0 border-b border-[#282522] text-[#f4ebe0] px-0 focus:outline-none focus:border-[#c8ac82] font-mono text-sm transition-colors"
+                  className="w-full h-11 bg-transparent border-0 border-b border-[#1f1f1f] text-[#ffffff] px-0 focus:outline-none focus:border-[#0055fe] font-mono text-sm transition-colors"
                 >
                   {services.map((s) => (
-                    <option key={s} value={s} className="bg-[#141211]">
+                    <option key={s} value={s} className="bg-[#0d0d0d]">
                       {s}
                     </option>
                   ))}
                 </select>
               </div>
               <div>
-                <label className="text-[10px] uppercase tracking-[0.25em] text-[#a39b92] font-mono mb-3 block">
+                <label className="text-[10px] uppercase tracking-[0.25em] text-[#999999] font-mono mb-3 block">
                   Tell Us About Your Requirement
                 </label>
                 <Textarea
@@ -187,7 +187,7 @@ const Contact = forwardRef(function Contact(_, ref) {
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   rows={4}
                   placeholder="What are you trying to build or grow?"
-                  className="input-minimal resize-none !border-b !border-[#282522] focus:!border-[#c8ac82]"
+                  className="input-minimal resize-none !border-b !border-[#1f1f1f] focus:!border-[#0055fe]"
                 />
               </div>
               <button
