@@ -1,156 +1,101 @@
 {
   "theme": "dark",
-  "archetype": "Archetype 5 (Jewel & Luxury) + Archetype 4 (Swiss & High Contrast)",
-  "vibe": "Premium, authoritative, cutting-edge tech agency. Cinematic, moody, expensive feel. NOT a generic AI template.",
+  "archetype": "Archetype 5: Jewel & Luxury (Sophisticated Monochrome with Serif Display)",
+  "rationale": "The user requested a premium, high-end agency feel. Transitioning from a generic dark mode to a sophisticated 'Old Money Tech / Editorial Future' aesthetic elevates the brand. We use deep warm obsidian as the base, champagne/sand for accents, and a classic serif paired with a crisp sans-serif to instantly communicate high-ticket luxury and authority.",
   "colors": {
-    "background": {
-      "default": "#050505",
-      "surface": "#0a0a0a",
-      "surface_raised": "#111111",
-      "glass": "rgba(255, 255, 255, 0.03)"
-    },
-    "text": {
-      "primary": "#FFFFFF",
-      "secondary": "rgba(255, 255, 255, 0.6)",
-      "muted": "rgba(255, 255, 255, 0.4)"
-    },
-    "brand": {
-      "primary": "#8B5CF6",
-      "secondary": "#3B82F6",
-      "accent": "#EC4899",
-      "gradient_primary": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%)",
-      "gradient_subtle": "linear-gradient(180deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 100%)"
-    },
-    "semantic": {
-      "success": "#10B981",
-      "warning": "#F59E0B",
-      "error": "#EF4444",
-      "info": "#3B82F6"
-    },
-    "border": {
-      "default": "rgba(255, 255, 255, 0.08)",
-      "hover": "rgba(255, 255, 255, 0.15)",
-      "active": "rgba(139, 92, 246, 0.3)"
-    }
+    "background": "#0A0909",
+    "surface": "#141211",
+    "surface_glass": "rgba(10, 9, 9, 0.7)",
+    "border": "#282522",
+    "primary": "#C8AC82",
+    "primary_hover": "#D7C19D",
+    "text_main": "#F4EBE0",
+    "text_muted": "#A39B92",
+    "success": "#25D366",
+    "focus_ring": "#C8AC82"
   },
   "typography": {
-    "fonts": {
-      "headings": "'Cabinet Grotesk', 'Clash Display', sans-serif",
-      "body": "'Satoshi', 'Manrope', 'Inter', sans-serif",
-      "mono": "'JetBrains Mono', monospace"
-    },
-    "sizes": {
-      "h1": "text-5xl sm:text-6xl lg:text-7xl tracking-tighter font-bold",
-      "h2": "text-4xl sm:text-5xl tracking-tight font-bold",
-      "h3": "text-2xl sm:text-3xl tracking-tight font-semibold",
-      "h4": "text-xl font-semibold",
-      "body_lg": "text-lg text-white/70 leading-relaxed",
-      "body": "text-base text-white/60 leading-relaxed",
-      "small": "text-sm text-white/50 uppercase tracking-widest font-semibold"
+    "fonts": [
+      "Cormorant Garamond (Weights: 400, 500, 600, 700, Italic)",
+      "Manrope (Weights: 400, 500, 600)",
+      "JetBrains Mono (Weights: 400)"
+    ],
+    "heading": "font-serif ('Cormorant Garamond', serif)",
+    "body": "font-sans ('Manrope', sans-serif)",
+    "mono": "font-mono ('JetBrains Mono', monospace)",
+    "rules": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter leading-none font-medium",
+      "h2": "text-3xl sm:text-4xl tracking-tight leading-none font-medium",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium",
+      "body_text": "text-base sm:text-lg text-[#A39B92] leading-relaxed",
+      "labels": "text-xs font-mono tracking-[0.2em] uppercase text-[#A39B92]",
+      "special": "Use italic generously for emphasis in headings to create an editorial feel."
     }
   },
   "spacing_and_layout": {
-    "section_padding": "py-24 md:py-32",
-    "container_max": "max-w-7xl mx-auto px-6 md:px-8",
-    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-6",
-    "border_radius": {
-      "small": "rounded-md",
-      "default": "rounded-xl",
-      "large": "rounded-2xl",
-      "full": "rounded-full"
+    "philosophy": "Generous spacing. Allow components to breathe. Containers should have ample padding (p-10 to p-16).",
+    "radius": {
+      "cards": "rounded-none (Sharp corners for an architectural, serious feel)",
+      "buttons": "rounded-full (Pill shape for primary CTAs to create contrast with sharp cards)",
+      "inputs": "rounded-none"
+    },
+    "grid_strategy": "Asymmetrical Bento Grid for Services. Break standard 3-column symmetry by using col-span variations to create a dynamic, editorial layout.",
+    "alignment": "Left-aligned for most content to maintain reading flow, except for centered Hero and Section Titles where appropriate."
+  },
+  "motion_and_interactions": {
+    "hover_states": "Text colors must brighten explicitly. Borders change from #282522 to #C8AC82. Background surfaces slightly lighten.",
+    "framer_motion": {
+      "entrance": "Fade in and translate-y (10px). Slow stagger for lists.",
+      "easing": "ease: [0.22, 1, 0.36, 1], duration: 0.8",
+      "parallax": "Use subtle scroll-linked parallax for large images in the case study section."
+    },
+    "images": "Grayscale by default (filter: grayscale(100%)), transitioning to color on hover. This adds a sophisticated, curated feel to the portfolio."
+  },
+  "components": {
+    "header": {
+      "style": "Crystal Glass navigation (backdrop-blur-xl bg-[#0A0909]/60 border-b border-[#282522]).",
+      "logo": "Uppercase, tracked out (tracking-[0.2em]), serif or clean sans.",
+      "links": "Muted text transitioning to bone white on hover."
+    },
+    "hero": {
+      "style": "Cinematic and deep. Use 'hero_background' image covered with a heavily blurred dark overlay (bg-black/60) and noise texture.",
+      "h1": "Large serif typography. Emphasize a word like *Customers* in italic.",
+      "ctas": "Primary: Champagne background, dark text, pill shape. Secondary: Outline, bone white text, pill shape.",
+      "social_proof": "Small avatar group next to monospace text '100+ HAPPY CLIENTS'."
+    },
+    "marquee": {
+      "trust_logos": "Slow, continuous drift. Logos should be muted/grayscale (opacity-40), brightening on hover.",
+      "portfolio": "Two rows moving in opposite directions. Cards should have no borders or a crisp 1px border. The tag should use the monospace font."
+    },
+    "services_grid": {
+      "layout": "grid-cols-1 md:grid-cols-3 gap-6. Make it a bento box: Website Dev (col-span-2), Ecommerce (col-span-1), Landing Pages (col-span-1), Google Ads (col-span-2), Meta Ads (col-span-1), AI Automation (col-span-1).",
+      "card_style": "Solid #141211 background, 1px #282522 border. A sleek hover effect lifting the card slightly and illuminating the border."
+    },
+    "comparison_section": {
+      "style": "Skip generic cards. Use a bold 2-column layout divided by a vertical line on desktop. Left (Traditional) is muted, struck-through, or low opacity. Right (Brandly) is bright, with champagne checkmarks."
+    },
+    "how_it_works": {
+      "style": "Vertical timeline. Use massive transparent stroke-only numbers (01, 02) in Cormorant Garamond overlapping the step descriptions."
+    },
+    "offer_pricing": {
+      "style": "Minimalist sharp-edged card with a glowing champagne top border. High contrast pricing typography."
+    },
+    "audit_tool": {
+      "style": "Form inputs should look like minimalist terminal/editorial fields. No full background, just a bottom border (border-b border-[#282522] focus:border-[#C8AC82]). Use JetBrains Mono for the input text."
+    },
+    "contact_form": {
+      "style": "Consistent with Audit tool. Submit button is a massive, full-width pill button."
+    },
+    "faq": {
+      "style": "Minimalist accordion. No card backgrounds, just single 1px separating lines."
     }
   },
-  "components_strategy": {
-    "marketing_sections": "Custom HTML/Tailwind. Use radical asymmetry, bento grids, and generative textures.",
-    "interactive_ui": "Use Shadcn components heavily customized to match the dark jewel/glass aesthetic. Specifically for tabs, inputs, and the audit tool.",
-    "surfaces": {
-      "glassmorphism": "backdrop-blur-xl bg-white/[0.02] border border-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.4)]",
-      "cards": "bg-[#0a0a0a] border border-white/[0.05] hover:border-white/[0.1] transition-all duration-300"
-    }
-  },
-  "pages_and_sections": [
-    {
-      "name": "Header",
-      "type": "navigation",
-      "details": "Sticky header (fixed w-full z-50). Crystal glassmorphism effect (backdrop-blur-md bg-[#050505]/60 border-b border-white/5). Must include Logo (Brandly Systems), 3-4 nav links, and a primary 'Book Consultation' CTA."
-    },
-    {
-      "name": "Hero",
-      "type": "marketing",
-      "details": "Massive asymmetric layout. Left: High-impact typography 'Your Business Is Losing Customers Online — Here's Why', with a subtitle and dual CTA buttons ('Audit My Website', 'Audit My Google Profile'). Right or Bottom: A visual representation of the Audit Tool interface floating in 3D or glassmorphic space. Use the hero_bg image as an absolute background layer with a dark gradient overlay."
-    },
-    {
-      "name": "Trust Logos",
-      "type": "marquee",
-      "details": "Subtle, slow-moving marquee of client logos. Opacity at 30%, grayscale. Use react-fast-marquee."
-    },
-    {
-      "name": "Audit Tool UI (The Core Lead Gen)",
-      "type": "interactive_dashboard",
-      "details": "A prominent section styled like a real SaaS product interface. Tabs for 'Website Audit' and 'GMB Audit'. User enters URL -> hits 'Scan'. Show a 2-second loading skeleton/progress bar. Then show the Report. \n\nCRITICAL LEAD CAPTURE MECHANIC: The report must show a large 'Score 0-100' at the top (make it look 65/100 to cause urgency), but the detailed 'Issues', 'Warnings', and 'Good' sections below it must be locked behind a heavy blur (`backdrop-blur-md`). Overlay a crisp Lead Capture Form (Name, Business Name, Email, Phone) over the blur with the copy: 'Enter details to unlock full report & optimization guide'."
-    },
-    {
-      "name": "How It Works",
-      "type": "marketing",
-      "details": "3-step process. Use a vertical timeline or a 3-column bento grid. Step 1: Run the Audit. Step 2: Get the Strategy. Step 3: We Execute."
-    },
-    {
-      "name": "Services",
-      "type": "bento_grid",
-      "details": "4 cards: Website Design, Facebook Ads, AI Automation, SMMA. Use Tetris Grid layout. The AI Automation card should span 2 columns and use the 'service_ai_automation' image."
-    },
-    {
-      "name": "Results / Case Study",
-      "type": "data_visualization",
-      "details": "Before vs After metrics (e.g., Conversion Rate: 1.2% -> 4.5%). Style as sharp dashboard widgets. Use the 'ui_screenshot' image as background texture."
-    },
-    {
-      "name": "Footer",
-      "type": "footer",
-      "details": "Dark, expansive (py-32). Massive 'Let's Talk' text. Simple links for contact, services, socials."
-    }
-  ],
-  "image_urls": [
-    {
-      "slug": "hero_bg",
-      "url": "https://static.prod-images.emergentagent.com/jobs/c14daa47-0c52-4183-8fc8-72aab2eb836a/images/5d29d23056efede9393b7211eaa3745f6a38060396762d3d35f1790b94c22585.png",
-      "category": "background",
-      "description": "Abstract cinematic dark background with glowing purple/indigo light."
-    },
-    {
-      "slug": "service_ai_automation",
-      "url": "https://static.prod-images.emergentagent.com/jobs/c14daa47-0c52-4183-8fc8-72aab2eb836a/images/c335c47c6667ee8e22d99c18b01391f8d01839de7bd65bf4a48e44cf83e92378.png",
-      "category": "feature",
-      "description": "Abstract 3D glass monolith with glowing purple light, perfect for AI Automation service card."
-    },
-    {
-      "slug": "laptop_desk",
-      "url": "https://images.unsplash.com/photo-1586202690666-e1f32e218afe",
-      "category": "context",
-      "description": "Macbook pro on desk, use for case study or background texture."
-    },
-    {
-      "slug": "ui_screenshot",
-      "url": "https://images.unsplash.com/photo-1668713239048-0746aac1fec1",
-      "category": "texture",
-      "description": "Abstract UI texture, useful for blending into the case study section."
-    }
-  ],
-  "interactions_and_animations": {
-    "hover_states": "All buttons must have explicit hover states (lighter background, glow effect). Cards should use -translate-y-1 and increased border opacity.",
-    "framer_motion": "Use smooth fade-in-up (y: 20, opacity: 0) for sections as they scroll into view. The Audit Tool scan should have a sequential loading animation.",
-    "lead_capture_reveal": "When the lead form is submitted, animate the removal of the blur overlay (duration 0.5s ease) to reveal the report."
+  "media": {
+    "hero_background": "https://static.prod-images.emergentagent.com/jobs/f6aefcea-ad04-4181-b5e2-9f47f3a3ce04/images/5c6269d605e9f6809185d07f7cabc741aa1d1ba147606ff26b111d82b94de5c3.png",
+    "texture_overlay": "https://static.prod-images.emergentagent.com/jobs/f6aefcea-ad04-4181-b5e2-9f47f3a3ce04/images/3f242c62a38569f322fb575e22355eb7d60f7309b2871dff9990934b09064270.png",
+    "instruction": "Use existing portfolio images as requested by the user, but apply the grayscale-to-color hover interaction. Never use placeholder images. If client logos are missing, use typography-based placeholders (e.g. text 'ACME CORP' in monospace)."
   },
   "testing": {
-    "required_attributes": "Add data-testid to ALL interactive elements. e.g., data-testid='audit-submit-btn', data-testid='tab-website', data-testid='lead-form-name'."
-  },
-  "instructions_to_main_agent": [
-    "Install and use 'framer-motion' for all animations.",
-    "Install 'lucide-react' for icons.",
-    "Install 'react-fast-marquee' for the trust logos.",
-    "CRITICAL: Do NOT use standard flat backgrounds. Build depth with gradients and glassmorphism. (e.g., bg-[#050505] with radial gradients in the corners).",
-    "CRITICAL: The lead capture functionality must be functional state-wise. The user shouldn't be able to bypass the blur without entering info.",
-    "Use Shadcn UI for the Tabs, Inputs, and Forms, but override their default white/light styling to match our dark theme (bg-transparent, white borders, etc).",
-    "Headings must use 'Cabinet Grotesk' or a suitable wide geometric font (like 'Clash Display'). Do not use 'Inter' for headings."
-  ]
+    "attributes": "ALL interactive elements, form fields, and navigation links MUST include data-testid attributes."
+  }
 }
