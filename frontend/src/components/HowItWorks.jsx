@@ -27,61 +27,68 @@ export default function HowItWorks({ onBookConsult }) {
     <section
       id="how-it-works"
       data-testid="how-it-works-section"
-      className="relative py-24 md:py-32"
+      className="relative py-28 md:py-36"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
           <div>
-            <span className="text-xs uppercase tracking-[0.25em] text-violet-300 font-mono">
-              How it works
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#c8ac82] font-mono">
+              — How It Works
             </span>
-            <h2 className="mt-3 font-display font-black text-4xl sm:text-5xl lg:text-6xl tracking-tighter">
-              Three steps. <span className="text-white/40">No fluff.</span>
+            <h2 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#f4ebe0] leading-[0.95]">
+              Three steps.{" "}
+              <span className="font-display-italic text-[#a39b92]">
+                No fluff.
+              </span>
             </h2>
           </div>
-          <p className="md:max-w-sm text-white/55">
+          <p className="md:max-w-sm text-[#a39b92] font-body leading-relaxed">
             From first call to fully managed growth system — here's exactly how
             we work with you.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 gap-0 border-t border-[#282522]">
           {steps.map((s, i) => (
             <motion.div
               key={s.n}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative rounded-2xl p-7 bg-white/[0.02] border border-white/[0.06] hover:border-white/15 transition-all group"
+              transition={{ duration: 0.7, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              className={`relative p-10 md:p-12 border-b border-[#282522] ${
+                i < steps.length - 1 ? "md:border-r" : ""
+              } group hover:bg-[#141211] transition-colors duration-500`}
               data-testid={`step-${s.n}`}
             >
-              <div className="flex items-center justify-between">
-                <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-violet-500/20 to-fuchsia-500/10 border border-violet-400/20 flex items-center justify-center">
-                  <s.Icon size={20} className="text-violet-300" />
+              <div className="stroke-num text-[10rem] absolute -top-4 right-6 opacity-60 group-hover:opacity-100 transition-opacity">
+                {s.n}
+              </div>
+              <div className="relative">
+                <div className="h-12 w-12 border border-[#282522] group-hover:border-[#c8ac82] transition-colors flex items-center justify-center text-[#c8ac82]">
+                  <s.Icon size={18} strokeWidth={1.5} />
                 </div>
-                <span className="font-display font-black text-5xl text-white/[0.06] group-hover:text-white/10 transition-colors">
-                  {s.n}
-                </span>
+                <div className="mt-10 font-display text-3xl text-[#f4ebe0] tracking-tight leading-tight">
+                  {s.title}
+                </div>
+                <p className="mt-4 text-[#a39b92] leading-relaxed font-body max-w-sm">
+                  {s.desc}
+                </p>
               </div>
-              <div className="mt-8 font-display font-bold text-xl">
-                {s.title}
-              </div>
-              <p className="mt-2 text-white/55 leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>
 
         {onBookConsult && (
-          <div className="mt-12 flex justify-center">
+          <div className="mt-16 flex justify-center">
             <button
               onClick={onBookConsult}
               data-testid="how-book-call-btn"
-              className="group inline-flex items-center gap-2 rounded-full h-12 px-6 bg-white text-black font-semibold hover:bg-white/90 transition-all"
+              className="group pill-light inline-flex items-center gap-2 h-12 px-8 text-[12px] font-mono tracking-[0.14em] uppercase"
             >
               Book a call
               <ArrowRight
-                size={16}
+                size={14}
                 className="transition-transform group-hover:translate-x-0.5"
               />
             </button>

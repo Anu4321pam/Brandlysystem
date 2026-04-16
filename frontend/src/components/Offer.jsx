@@ -65,75 +65,75 @@ export default function Offer({ onBookConsult }) {
     <section
       id="offer"
       data-testid="offer-section"
-      className="relative py-24 md:py-32"
+      className="relative py-28 md:py-36"
     >
-      <div className="absolute inset-0 bg-orb-subtle pointer-events-none" />
       <div className="relative max-w-6xl mx-auto px-6 md:px-8">
         {/* Heading */}
-        <div className="text-center mb-14 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full bg-red-500/10 border border-red-500/30 px-3 py-1.5 mb-5">
-            <Flame size={12} className="text-red-400" />
-            <span className="text-[10px] uppercase tracking-widest text-red-300 font-mono font-semibold">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 border border-[#c8ac82]/40 px-4 py-1.5 mb-6">
+            <Flame size={11} className="text-[#c8ac82]" />
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#c8ac82] font-mono">
               Only 3 onboarding spots left · February
             </span>
           </div>
           <h2
             data-testid="offer-heading"
-            className="font-display font-black text-4xl sm:text-5xl lg:text-6xl tracking-tighter"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#f4ebe0] leading-[0.95]"
           >
-            The <span className="gradient-text">Local-Lead Engine.</span>
+            The{" "}
+            <span className="font-display-italic champagne-text">
+              Local-Lead
+            </span>{" "}
+            Engine.
           </h2>
-          <p className="mt-5 text-white/60 text-lg leading-relaxed">
+          <p className="mt-6 text-[#a39b92] text-lg leading-relaxed font-body">
             A complete done-for-you growth system built, launched, and managed
-            for your business in 14 days. Everything below is included — no add-ons,
-            no upsells, no surprise invoices.
+            for your business in 14 days. Everything below is included — no
+            add-ons, no upsells, no surprise invoices.
           </p>
         </div>
 
         {/* Value Stack Card */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="relative glass-strong rounded-2xl overflow-hidden"
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="relative bg-[#141211] border border-[#282522] champagne-top-border overflow-hidden"
         >
-          <div
-            aria-hidden
-            className="absolute -inset-8 bg-gradient-to-br from-violet-600/15 via-transparent to-fuchsia-500/10 blur-3xl pointer-events-none"
-          />
-
           <div className="relative grid lg:grid-cols-12">
             {/* LEFT — What's included */}
-            <div className="lg:col-span-7 p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-white/[0.06]">
-              <div className="text-xs uppercase tracking-widest text-violet-300 font-mono mb-4">
-                What's inside
+            <div className="lg:col-span-7 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-[#282522]">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-[#c8ac82] font-mono mb-5">
+                — What's inside
               </div>
-              <h3 className="font-display font-bold text-2xl mb-6">
-                Core system
+              <h3 className="font-display text-3xl text-[#f4ebe0] mb-8">
+                Core <span className="font-display-italic">system</span>
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {coreStack.map((item, i) => (
                   <motion.li
                     key={item.title}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
+                    transition={{ delay: i * 0.05, duration: 0.6 }}
                     data-testid={`offer-core-${i}`}
-                    className="flex items-start gap-4 pb-4 border-b border-white/[0.05] last:border-b-0"
+                    className="flex items-start gap-4 pb-5 border-b border-[#282522] last:border-b-0 last:pb-0"
                   >
-                    <span className="h-6 w-6 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check size={13} />
+                    <span className="h-5 w-5 border border-[#c8ac82]/50 text-[#c8ac82] flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check size={11} strokeWidth={2} />
                     </span>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline justify-between gap-4 flex-wrap">
-                        <div className="font-semibold text-white">{item.title}</div>
-                        <div className="text-sm text-white/40 font-mono whitespace-nowrap">
+                        <div className="font-medium text-[#f4ebe0] text-[15px]">
+                          {item.title}
+                        </div>
+                        <div className="text-[11px] text-[#a39b92] font-mono whitespace-nowrap">
                           {format(item.value)} value
                         </div>
                       </div>
-                      <p className="mt-1 text-sm text-white/55 leading-relaxed">
+                      <p className="mt-1.5 text-sm text-[#a39b92] leading-relaxed font-body">
                         {item.desc}
                       </p>
                     </div>
@@ -141,8 +141,8 @@ export default function Offer({ onBookConsult }) {
                 ))}
               </ul>
 
-              <h3 className="font-display font-bold text-2xl mt-10 mb-6">
-                Plus 3 bonuses
+              <h3 className="font-display text-3xl text-[#f4ebe0] mt-12 mb-8">
+                Plus 3 <span className="font-display-italic">bonuses</span>
               </h3>
               <ul className="space-y-4">
                 {bonuses.map((b, i) => (
@@ -151,20 +151,22 @@ export default function Offer({ onBookConsult }) {
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
+                    transition={{ delay: i * 0.05, duration: 0.6 }}
                     data-testid={`offer-bonus-${i}`}
-                    className="rounded-xl p-4 bg-violet-500/[0.06] border border-violet-400/20"
+                    className="p-5 bg-[#c8ac82]/[0.04] border border-[#c8ac82]/20"
                   >
                     <div className="flex items-baseline justify-between gap-4 flex-wrap">
-                      <div className="font-semibold text-violet-200">{b.title}</div>
-                      <div className="text-sm text-violet-200/60 font-mono whitespace-nowrap">
+                      <div className="font-medium text-[#f4ebe0]">
+                        {b.title}
+                      </div>
+                      <div className="text-[11px] text-[#c8ac82]/70 font-mono whitespace-nowrap">
                         {format(b.value)} value
                       </div>
                     </div>
-                    <div className="mt-1 text-xs italic text-violet-300/70">
+                    <div className="mt-1.5 text-xs italic text-[#c8ac82]/80 font-display-italic">
                       {b.why}
                     </div>
-                    <p className="mt-2 text-sm text-white/55 leading-relaxed">
+                    <p className="mt-2 text-sm text-[#a39b92] leading-relaxed font-body">
                       {b.desc}
                     </p>
                   </motion.li>
@@ -173,65 +175,73 @@ export default function Offer({ onBookConsult }) {
             </div>
 
             {/* RIGHT — Price + Guarantee */}
-            <div className="lg:col-span-5 p-8 md:p-10 bg-gradient-to-br from-violet-600/10 via-transparent to-transparent">
-              <div className="text-xs uppercase tracking-widest text-white/40 font-mono">
+            <div className="lg:col-span-5 p-8 md:p-12 bg-gradient-to-br from-[#c8ac82]/[0.06] via-transparent to-transparent">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-[#a39b92] font-mono">
                 Total value
               </div>
               <div
-                className="mt-2 font-display font-bold text-4xl text-white/30 line-through decoration-red-500/60 decoration-2"
+                className="mt-3 font-display text-4xl text-[#a39b92]/50 line-through decoration-[#c8ac82]/60 decoration-[1px]"
                 data-testid="offer-total-value"
               >
                 {format(total)}
               </div>
 
-              <div className="mt-8 text-xs uppercase tracking-widest text-emerald-300 font-mono">
+              <div className="mt-10 text-[10px] uppercase tracking-[0.3em] text-[#c8ac82] font-mono">
                 Your price today
               </div>
-              <div className="mt-2 flex items-baseline gap-3 flex-wrap">
-                <div className="font-display font-black text-6xl gradient-text">
+              <div className="mt-3 flex items-baseline gap-3 flex-wrap">
+                <div className="font-display text-7xl champagne-text leading-none">
                   $0
                 </div>
-                <div className="text-white/60">for 14 days</div>
+                <div className="text-[#a39b92] font-display-italic text-xl">
+                  for 14 days
+                </div>
               </div>
-              <p className="mt-3 text-sm text-white/55 leading-relaxed">
+              <p className="mt-4 text-sm text-[#a39b92] leading-relaxed font-body">
                 After your trial:{" "}
-                <span className="text-white font-semibold">$497/mo</span> — locked
-                in as a founding rate.{" "}
-                <span className="text-white/40 line-through">$697/mo</span>{" "}
+                <span className="text-[#f4ebe0] font-semibold">$497/mo</span>{" "}
+                — locked in as a founding rate.{" "}
+                <span className="text-[#a39b92]/60 line-through">$697/mo</span>{" "}
                 starting March 1. Cancel anytime. No contracts. No setup fees.
               </p>
 
               {/* Guarantee */}
               <div
                 data-testid="offer-guarantee"
-                className="mt-8 rounded-xl p-5 bg-emerald-500/[0.06] border border-emerald-400/20"
+                className="mt-10 p-6 bg-[#c8ac82]/[0.04] border border-[#c8ac82]/30"
               >
-                <div className="flex items-center gap-3 mb-2">
-                  <Shield size={18} className="text-emerald-300" />
-                  <div className="font-display font-bold text-lg text-emerald-100">
-                    Our 20-Jobs Guarantee
+                <div className="flex items-center gap-3 mb-3">
+                  <Shield size={18} className="text-[#c8ac82]" strokeWidth={1.5} />
+                  <div className="font-display text-xl text-[#f4ebe0]">
+                    The 20-Jobs{" "}
+                    <span className="font-display-italic">Guarantee</span>
                   </div>
                 </div>
-                <p className="text-sm text-white/65 leading-relaxed">
+                <p className="text-sm text-[#a39b92] leading-relaxed font-body">
                   Live in 14 days — or your first month is free. Don't see{" "}
-                  <span className="text-white font-semibold">
+                  <span className="text-[#f4ebe0] font-semibold">
                     20 qualified booked jobs in your first 90 days
                   </span>
-                  ? We keep working at no charge until you do. Zero risk to you.
+                  ? We keep working at no charge until you do. Zero risk to
+                  you.
                 </p>
               </div>
 
               {/* Urgency bar */}
               <div
                 data-testid="offer-urgency"
-                className="mt-6 rounded-xl p-4 bg-red-500/[0.08] border border-red-500/25 flex items-start gap-3"
+                className="mt-6 p-5 border border-[#c8ac82]/30 flex items-start gap-3"
               >
-                <Clock size={16} className="text-red-300 mt-0.5 flex-shrink-0" />
+                <Clock
+                  size={16}
+                  className="text-[#c8ac82] mt-0.5 flex-shrink-0"
+                  strokeWidth={1.5}
+                />
                 <div className="text-sm">
-                  <div className="text-red-200 font-semibold">
+                  <div className="text-[#f4ebe0] font-medium">
                     3 of 8 February spots remain
                   </div>
-                  <div className="text-white/55 mt-0.5">
+                  <div className="text-[#a39b92] mt-1 font-body">
                     We cap onboarding at 8 businesses/month to keep quality
                     tight. Founding pricing ends Feb 28.
                   </div>
@@ -241,17 +251,17 @@ export default function Offer({ onBookConsult }) {
               <button
                 onClick={onBookConsult}
                 data-testid="offer-claim-btn"
-                className="mt-8 w-full group inline-flex items-center justify-center gap-2 rounded-full h-14 px-6 bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-400 hover:to-fuchsia-400 font-semibold text-white shadow-[0_12px_40px_rgba(139,92,246,0.35)] text-base"
+                className="mt-8 w-full pill-light inline-flex items-center justify-center gap-2 h-14 px-6 text-[13px] font-mono tracking-[0.14em] uppercase group"
               >
-                <Sparkles size={18} />
+                <Sparkles size={16} strokeWidth={1.5} />
                 Claim my spot
                 <ArrowRight
-                  size={18}
+                  size={16}
                   className="transition-transform group-hover:translate-x-0.5"
                 />
               </button>
-              <p className="mt-3 text-center text-[11px] text-white/40">
-                Takes 20 minutes · No commitment · Book live plan review
+              <p className="mt-4 text-center text-[10px] text-[#a39b92] font-mono tracking-[0.15em] uppercase">
+                Takes 20 min · No commitment · Live plan review
               </p>
             </div>
           </div>

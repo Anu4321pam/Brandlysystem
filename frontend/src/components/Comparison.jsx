@@ -24,48 +24,54 @@ export default function Comparison({ onScrollToContact }) {
     <section
       id="why-us"
       data-testid="comparison-section"
-      className="relative py-24 md:py-32"
+      className="relative py-28 md:py-36"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8">
-        <div className="text-center mb-16">
-          <div className="text-xs uppercase tracking-[0.3em] text-white/40 font-mono mb-4">
-            Comparison
+        <div className="text-center mb-20">
+          <div className="text-[10px] uppercase tracking-[0.35em] text-[#c8ac82] font-mono mb-5">
+            — Why Us
           </div>
           <h2
             data-testid="comparison-heading"
-            className="font-display text-4xl sm:text-5xl lg:text-6xl tracking-tight"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-[-0.025em] text-[#f4ebe0] leading-[0.95]"
           >
-            How We Build Websites That Actually Work
+            How We Build{" "}
+            <span className="font-display-italic">Websites</span> That Actually
+            Work
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="relative grid md:grid-cols-2 gap-0 border border-[#282522]">
+          <div className="hidden md:block absolute top-8 bottom-8 left-1/2 -translate-x-1/2 v-divider" />
+
           {/* Other Agencies */}
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             data-testid="col-others"
-            className="surface p-8 md:p-10"
+            className="p-10 md:p-12 border-b md:border-b-0 md:border-r border-[#282522]"
           >
-            <div className="text-xs uppercase tracking-[0.25em] text-white/35 font-mono mb-3">
+            <div className="text-[10px] uppercase tracking-[0.3em] text-[#a39b92]/60 font-mono mb-4">
               Them
             </div>
-            <h3 className="font-display text-3xl text-white/60 mb-8">
-              Other Agencies
+            <h3 className="font-display text-4xl text-[#a39b92] mb-10">
+              Other <span className="font-display-italic">Agencies</span>
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-5">
               {others.map((t, i) => (
                 <li
                   key={i}
                   data-testid={`others-item-${i}`}
-                  className="flex items-start gap-3 text-white/55"
+                  className="flex items-start gap-4 text-[#a39b92]/70"
                 >
-                  <span className="h-5 w-5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <X size={12} />
+                  <span className="h-5 w-5 border border-[#282522] text-[#a39b92]/50 flex items-center justify-center flex-shrink-0 mt-1">
+                    <X size={11} strokeWidth={1.5} />
                   </span>
-                  <span className="leading-relaxed">{t}</span>
+                  <span className="leading-relaxed font-body line-through decoration-[#a39b92]/20">
+                    {t}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -76,32 +82,32 @@ export default function Comparison({ onScrollToContact }) {
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, delay: 0.05 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             data-testid="col-us"
-            className="relative overflow-hidden rounded-2xl p-8 md:p-10 bg-gradient-to-br from-indigo-500/15 via-[#0a0a0a] to-[#0a0a0a] border border-indigo-400/30"
+            className="relative p-10 md:p-12 bg-[#141211]"
           >
             <div
               aria-hidden
-              className="absolute -top-20 -right-20 h-64 w-64 rounded-full bg-indigo-500/20 blur-3xl pointer-events-none"
+              className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[#c8ac82]/10 blur-3xl pointer-events-none"
             />
             <div className="relative">
-              <div className="text-xs uppercase tracking-[0.25em] text-indigo-300 font-mono mb-3">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-[#c8ac82] font-mono mb-4">
                 Us
               </div>
-              <h3 className="font-display text-3xl text-white mb-8">
-                Brandly Systems
+              <h3 className="font-display text-4xl text-[#f4ebe0] mb-10">
+                Brandly <span className="font-display-italic">Systems</span>
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {us.map((t, i) => (
                   <li
                     key={i}
                     data-testid={`us-item-${i}`}
-                    className="flex items-start gap-3 text-white/85"
+                    className="flex items-start gap-4 text-[#f4ebe0]"
                   >
-                    <span className="h-5 w-5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check size={12} />
+                    <span className="h-5 w-5 bg-[#c8ac82]/10 border border-[#c8ac82]/50 text-[#c8ac82] flex items-center justify-center flex-shrink-0 mt-1">
+                      <Check size={11} strokeWidth={2} />
                     </span>
-                    <span className="leading-relaxed">{t}</span>
+                    <span className="leading-relaxed font-body">{t}</span>
                   </li>
                 ))}
               </ul>
@@ -109,13 +115,13 @@ export default function Comparison({ onScrollToContact }) {
           </motion.div>
         </div>
 
-        <div className="mt-14 flex justify-center">
+        <div className="mt-16 flex justify-center">
           <button
             onClick={onScrollToContact}
             data-testid="comparison-contact-btn"
-            className="pill-light h-12 px-7"
+            className="pill-light h-12 px-8 text-[12px] font-mono tracking-[0.14em] uppercase"
           >
-            Contact Us
+            Start Your Project
           </button>
         </div>
       </div>

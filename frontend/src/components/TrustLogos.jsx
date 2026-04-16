@@ -18,39 +18,41 @@ export default function TrustLogos() {
   return (
     <section
       data-testid="trust-section"
-      className="relative py-16 border-y border-white/[0.06]"
+      className="relative py-20 border-y border-[#282522]"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-8 mb-10 text-center">
-        <div className="inline-flex items-center gap-2">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 mb-12 text-center">
+        <div className="inline-flex items-center gap-3">
           <div className="flex gap-0.5">
             {[0, 1, 2, 3, 4].map((i) => (
               <Star
                 key={i}
-                size={16}
-                className="fill-white text-white"
+                size={14}
+                className="fill-[#c8ac82] text-[#c8ac82]"
               />
             ))}
           </div>
           <span
             data-testid="trust-rating"
-            className="text-white/90 font-semibold"
+            className="text-[#f4ebe0] font-display text-xl"
           >
-            4.9/5
+            4.9
           </span>
-          <span className="text-white/50">from 100+ clients</span>
+          <span className="text-[#a39b92] text-[11px] font-mono tracking-[0.2em] uppercase">
+            From 100+ Clients
+          </span>
         </div>
       </div>
 
       <div className="marquee-mask">
-        <Marquee speed={32} gradient={false} pauseOnHover>
+        <Marquee speed={28} gradient={false} pauseOnHover>
           {logos.map((l) => (
             <div
               key={l}
               data-testid={`logo-${l.toLowerCase().replace(/\s+/g, "-")}`}
-              className="mx-12 flex items-center gap-3 text-white/40 hover:text-white/85 transition-colors"
+              className="mx-14 flex items-center gap-3 text-[#a39b92]/50 hover:text-[#c8ac82] transition-colors duration-500"
             >
-              <div className="h-5 w-5 rounded-sm border border-white/20" />
-              <span className="font-display text-lg tracking-tight whitespace-nowrap">
+              <div className="h-1.5 w-1.5 rounded-full bg-current" />
+              <span className="font-display text-xl tracking-[0.04em] whitespace-nowrap">
                 {l}
               </span>
             </div>

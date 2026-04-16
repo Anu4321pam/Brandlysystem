@@ -24,7 +24,8 @@ export default function Landing() {
   };
 
   return (
-    <div data-testid="landing-page" className="relative bg-black text-white">
+    <div data-testid="landing-page" className="relative bg-[#0a0909] text-[#f4ebe0]">
+      <div aria-hidden className="global-grain" />
       <Header onScrollToAudit={scrollToAudit} onScrollToContact={scrollToContact} />
       <main>
         <Hero onScrollToContact={scrollToContact} onScrollToAudit={scrollToAudit} />
