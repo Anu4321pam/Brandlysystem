@@ -7,15 +7,14 @@ import { createConsultation } from "@/lib/api";
 
 const services = [
   "Website Development",
+  "Ecommerce Development",
   "Landing Pages",
-  "Ecommerce",
-  "SEO Optimization",
-  "Local Ranking Optimization",
-  "Conversion Rate Optimization (CRO)",
-  "Website Audit",
+  "Google Ads",
+  "Meta Ads",
   "AI Automation",
-  "MVP Development",
 ];
+
+const WHATSAPP_NUMBER = "919229723612";
 
 const Contact = forwardRef(function Contact(_, ref) {
   const [form, setForm] = useState({
@@ -48,7 +47,19 @@ const Contact = forwardRef(function Contact(_, ref) {
         message: form.message,
       });
       setDone(true);
-      toast.success("Thanks! We'll reach out within 24 hours.");
+      toast.success("Redirecting you to WhatsApp...");
+
+      const waText =
+        `Hi Brandly Systems, I'd like to start a project.\n\n` +
+        `• Name: ${form.name}\n` +
+        `• WhatsApp: ${form.phone}\n` +
+        `• Email: ${form.email}\n` +
+        `• Service: ${form.service}\n` +
+        (form.message ? `• Requirement: ${form.message}\n` : "");
+      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
+      setTimeout(() => {
+        window.open(waUrl, "_blank", "noopener,noreferrer");
+      }, 400);
     } catch (err) {
       toast.error(err?.response?.data?.detail || "Could not submit");
     } finally {
@@ -84,10 +95,22 @@ const Contact = forwardRef(function Contact(_, ref) {
         <div className="surface p-6 md:p-10">
           {done ? (
             <div className="text-center py-10" data-testid="contact-success">
-              <div className="font-display text-3xl mb-3">We're on it.</div>
+              <div className="font-display text-3xl mb-3">Opening WhatsApp…</div>
               <p className="text-white/60">
-                Your request is in. We'll reach out within 24 hours.
+                If it didn't open automatically, tap the button below to chat with us on WhatsApp.
               </p>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                  `Hi Brandly Systems, I'd like to start a project.\n\n• Name: ${form.name}\n• WhatsApp: ${form.phone}\n• Email: ${form.email}\n• Service: ${form.service}` +
+                    (form.message ? `\n• Requirement: ${form.message}` : "")
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="whatsapp-fallback-link"
+                className="pill-light inline-flex items-center gap-2 h-12 px-6 mt-6"
+              >
+                Continue on WhatsApp
+              </a>
             </div>
           ) : (
             <form

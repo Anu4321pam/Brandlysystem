@@ -2,6 +2,8 @@ import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import Landing from "@/pages/Landing";
+import Admin from "@/pages/Admin";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 function App() {
   return (
@@ -9,7 +11,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
+        <WhatsAppFloat />
       </BrowserRouter>
       <Toaster
         theme="dark"

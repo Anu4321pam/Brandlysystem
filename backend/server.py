@@ -822,6 +822,15 @@ async def create_consultation(payload: ConsultationCreate):
     return consultation
 
 
+@api_router.get("/consultations", response_model=List[Consultation])
+async def list_consultations(limit: int = Query(200, ge=1, le=1000)):
+    docs = await db.consultations.find({}, {"_id": 0}).sort("created_at", -1).to_list(limit)
+    for d in docs:
+        if isinstance(d.get("created_at"), str):
+            d["created_at"] = datetime.fromisoformat(d["created_at"])
+    return [Consultation(**d) for d in docs]
+
+
 app.include_router(api_router)
 
 app.add_middleware(

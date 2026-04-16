@@ -19,3 +19,9 @@ export const createLead = (payload) =>
 
 export const createConsultation = (payload) =>
   api.post("/consultations", payload).then((r) => r.data);
+
+export const listConsultations = () =>
+  api.get("/consultations").then((r) => r.data);
+
+export const listLeads = () =>
+  api.get("/leads").then((r) => r.data);
