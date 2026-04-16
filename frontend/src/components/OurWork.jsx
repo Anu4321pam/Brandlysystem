@@ -26,6 +26,31 @@ const projects = [
     tag: "Renewable Energy",
     img: "https://customer-assets.emergentagent.com/job_audit-brandly/artifacts/cj2gr0up_portfolio-energy-DX6Dz4ZQ.png",
   },
+  {
+    name: "Academix",
+    tag: "University · Education",
+    img: "https://customer-assets.emergentagent.com/job_great-diffie-4/artifacts/banbbjdl_portfolio-university-CN7OsCkM.png",
+  },
+  {
+    name: "iDemy",
+    tag: "Online Learning",
+    img: "https://customer-assets.emergentagent.com/job_great-diffie-4/artifacts/brwhrnwn_portfolio-education-nWJHKcVT.png",
+  },
+  {
+    name: "FoodNook",
+    tag: "Restaurant · Food",
+    img: "https://customer-assets.emergentagent.com/job_great-diffie-4/artifacts/dbe5cxr3_portfolio-food-BpNmTFCB.png",
+  },
+  {
+    name: "Realest",
+    tag: "Real Estate",
+    img: "https://customer-assets.emergentagent.com/job_great-diffie-4/artifacts/injjc6ms_portfolio-realestate-yKv3XsLI.png",
+  },
+  {
+    name: "Dentreat",
+    tag: "Dental · Healthcare",
+    img: "https://customer-assets.emergentagent.com/job_great-diffie-4/artifacts/8wjam3g3_portfolio-dental-Da_jvaPB.png",
+  },
 ];
 
 const Card = ({ p }) => (
@@ -67,7 +92,7 @@ export default function OurWork() {
         </h2>
         <p className="mt-4 text-white/55 max-w-xl mx-auto">
           A few recent builds across beauty, fitness, logistics, cybersecurity,
-          and renewable energy.
+          renewable energy, education, food, real estate, and healthcare.
         </p>
       </div>
 
