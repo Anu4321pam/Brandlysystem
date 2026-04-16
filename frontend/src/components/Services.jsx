@@ -3,8 +3,8 @@ import {
   Globe,
   ShoppingCart,
   Target,
-  MapPinned,
-  Rocket,
+  Search,
+  Facebook,
   Cpu,
   ArrowUpRight,
 } from "lucide-react";
@@ -26,14 +26,14 @@ const services = [
     desc: "Running ads but not getting results? We create landing pages built with conversion strategy so more visitors turn into leads or sales.",
   },
   {
-    Icon: MapPinned,
-    title: "Google Business Profile Management",
-    desc: "Local customers search on Google every day. We optimize and manage your profile to improve visibility and local rankings.",
+    Icon: Search,
+    title: "Google Ads",
+    desc: "Capture high-intent buyers the moment they search. We plan, launch, and optimize Google Search, Shopping, and Performance Max campaigns for maximum ROAS.",
   },
   {
-    Icon: Rocket,
-    title: "MVP Development",
-    desc: "Have an idea but not ready for a full product yet? We build fast MVPs so you can test your idea, launch quickly, and get real feedback.",
+    Icon: Facebook,
+    title: "Meta Ads",
+    desc: "Turn scrolls into sales across Facebook & Instagram. We build creative, targeting, and funnels that consistently bring in leads and customers at a profitable cost.",
   },
   {
     Icon: Cpu,
