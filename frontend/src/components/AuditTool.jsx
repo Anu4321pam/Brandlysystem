@@ -221,9 +221,6 @@ const AuditTool = forwardRef(function AuditTool(
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <div className="text-center mb-14">
-          <div className="text-xs uppercase tracking-[0.3em] text-[#999999] font-mono mb-4">
-            Free Lead Magnet Tools
-          </div>
           <h2
             data-testid="audit-heading"
             className="font-display text-4xl sm:text-5xl lg:text-6xl tracking-tight"

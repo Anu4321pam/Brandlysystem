@@ -16,7 +16,7 @@ export default function Header({ onScrollToAudit, onScrollToContact }) {
     { label: "Home", href: "#" },
     { label: "Work", href: "#work" },
     { label: "Services", href: "#services" },
-    { label: "Free Tools", onClick: () => onScrollToAudit("website") },
+    { label: "Free Audit", onClick: () => onScrollToAudit("website") },
     { label: "Why Us", href: "#why-us" },
     { label: "Contact", onClick: onScrollToContact },
   ];
@@ -34,11 +34,13 @@ export default function Header({ onScrollToAudit, onScrollToContact }) {
         <a
           href="#"
           data-testid="brand-logo"
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-3 group"
         >
-          <div className="h-8 w-8 rounded-lg bg-[#0055fe] flex items-center justify-center text-white font-display font-bold text-sm">
-            B
-          </div>
+          <img
+            src="https://customer-assets.emergentagent.com/job_great-diffie-4/artifacts/vkrazyto_image.png"
+            alt="Brandly Systems"
+            className="h-10 w-10 rounded-lg object-cover"
+          />
           <span className="font-display text-white text-[15px] font-bold tracking-tight group-hover:text-[#0055fe] transition-colors">
             BRANDLY SYSTEMS
           </span>
